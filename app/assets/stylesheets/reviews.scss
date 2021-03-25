@@ -1,3 +1,41 @@
 // Place all the styles related to the reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.review_fields {
+  display: flex;
+}
+
+.review_field {
+  display: block;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.picture_field {
+  width: 100%;
+}
+
+.title_field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title_field_left {
+  margin-right: 20px;
+}
+
+.title_field_right {
+  height: 50px;
+  width: 300px;
+  font-size: x-large;
+}
+
+.comment_field {
+  width: 100%;
+  height: 500px;
+}
+
+.actions {
+  float: right;
+}

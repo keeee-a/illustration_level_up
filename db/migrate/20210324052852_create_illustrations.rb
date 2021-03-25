@@ -4,6 +4,7 @@ class CreateIllustrations < ActiveRecord::Migration[6.0]
       t.string :author
       t.string :account
       t.references :tag
+      t.references :review
       t.timestamps
     end
   end

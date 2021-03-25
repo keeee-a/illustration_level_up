@@ -1,22 +1,53 @@
-<%= form_with(model: review, local: true) do |form| %>
-  <% if review.errors.any? %>
+<%= form_with(model:@form, url: reviews_path, local: true) do |form| %>
+  <% if @form.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
+      <h2><%= pluralize(@form.errors.count, "error") %> prohibited this @form from being saved:</h2>
 
       <ul>
-        <% review.errors.full_messages.each do |message| %>
+        <% @form.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_field :comment %>
-  </div>
+  <div class="review_fields">
+  
+    <div class="review_field">
+      <div >
+        <%= form.label :picture %>
+        <%= form.file_field :picture, class:"picture_field" %>
+      </div>
+      <div>
+        <div>
+          <%= form.label :author %>
+          <%= form.text_field :author, class:"author_field"%>
+        </div>
+        <div>
+          <%= form.label :account %>
+          <%= form.text_field :account, class:"account_field"%>
+        </div>
+        <div>
+          <%= form.label :tag_id %>
+          <%= form.collection_select(:tag_id, Tag.all, :id, :name, {},{}) %>
+        </div>
+      </div>
+    </div>
 
+    <div class="review_field">
+      <div class="title_field">
+        <%= form.label :title, class:"title_field_left" %>
+        <%= form.text_field :title, class:"title_field_right" %>
+      </div>
+      <div>
+        <%= form.label :comment %>
+        <%= form.text_area :comment, class:"comment_field"%>
+      </div>
+    </div>
+
+  </div>
+  
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit value:"保存する" %>
   </div>
 <% end %>
