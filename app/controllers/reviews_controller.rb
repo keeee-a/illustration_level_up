@@ -22,9 +22,7 @@ class ReviewsController < ApplicationController
   # POST /reviews or /reviews.json
   def create
     @form = FormReview.new(form_params)
-    binding.pry
     if @form.valid?
-      binding.pry
       @form.save
       redirect_to controller: :reviews, action: :index
     else

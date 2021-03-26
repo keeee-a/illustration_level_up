@@ -39,3 +39,46 @@
 .actions {
   float: right;
 }
+
+//header css
+
+.header_template {
+  display: flex;
+  background-color: wheat;
+  margin: 0;
+  height: 100px;
+  align-items: center;
+}
+
+.application_name {
+  width: 50%;
+  margin-left: 30px;
+  font-size: xx-large;
+}
+
+.btn_places {
+  width: 50%;
+  align-items:center;
+}
+
+.create_review_btn {
+  float :right;
+  margin-right: 30px;
+  height:70px;
+  background-color: rgb(209, 164, 51);
+  border-radius: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create_review_link {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+
+
+//header css end
