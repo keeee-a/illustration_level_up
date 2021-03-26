@@ -15,8 +15,8 @@ $(document).on('turbolinks:load', function() {
     var img = new Image();
     var def =$.Deferred();
     reader.onload = function(e){
-      $('.picture_field').empty();
-      $('.picture_field').append(img);
+      $('.picture_preview').empty();  
+      $('.picture_preview').append(img);
       img.src = e.target.result;
       def.resolve(img);
     };

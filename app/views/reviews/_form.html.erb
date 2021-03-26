@@ -14,14 +14,19 @@
   <div class="review_fields">
   
     <div class="review_field">
+      
       <div class="picture_field", id="picture">
         <%= form.label :picture %>
         <%= form.file_field :picture, class:"picture_field" %>
-        <% if @form.picture.present? %>
-          <%= image_tag @form.picture.variant(resize: "300x300") %>
-        <% end %>
+        <div class="picture_preview">
+          <% if @form.picture.present? %>
+            <%= image_tag @form.picture, size:"300x300"%>
+          <% end %>
+        </div>
       </div>
-      <div>
+
+
+      <div class="picture_info_field">
         <div>
           <%= form.label :author %>
           <%= form.text_field :author, class:"author_field"%>
@@ -35,6 +40,7 @@
           <%= form.collection_select(:tag_id, Tag.all, :id, :name, {},{}) %>
         </div>
       </div>
+
     </div>
 
     <div class="review_field">
@@ -46,11 +52,12 @@
         <%= form.label :comment %>
         <%= form.text_area :comment, class:"comment_field"%>
       </div>
+      <div class="actions">
+        <%= form.submit value:"保存する", class:"action_btn"%>
+      </div>
     </div>
 
   </div>
   
-  <div class="actions">
-    <%= form.submit value:"保存する" %>
-  </div>
+  
 <% end %>
