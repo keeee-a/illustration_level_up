@@ -17,6 +17,9 @@
       <div >
         <%= form.label :picture %>
         <%= form.file_field :picture, class:"picture_field" %>
+        <% if @form.picture.present? %>
+          <%= image_tag @form.picture %>
+        <% end %>
       </div>
       <div>
         <div>
