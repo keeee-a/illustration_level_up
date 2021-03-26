@@ -14,11 +14,11 @@
   <div class="review_fields">
   
     <div class="review_field">
-      <div >
+      <div class="picture_field", id="picture">
         <%= form.label :picture %>
         <%= form.file_field :picture, class:"picture_field" %>
         <% if @form.picture.present? %>
-          <%= image_tag @form.picture %>
+          <%= image_tag @form.picture.variant(resize: "300x300") %>
         <% end %>
       </div>
       <div>
