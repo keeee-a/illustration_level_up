@@ -1,9 +1,41 @@
-<p id="notice"><%= notice %></p>
+<%= render "shared/header"%>
+<div class="review">
+  <div class="show_review">
+    <div class="show_picture_and_info">
+      <div>
+        <%= image_tag @review.illustration.picture, size:"500x500"%>
+        <div>
+          author
+          <%= @review.illustration.author %></br>
+          account
+          <%= @review.illustration.account %></br>
+          <% unless @review.illustration.tag_id == 1 %>
+            tag
+            <%= @review.illustration.tag.name %>
+          <% end%>
+        </div>
+      </div>
+    </div>
 
-<p>
-  <strong>Comment:</strong>
-  <%= @review.comment %>
-</p>
+    <div class="show_title_and_comment">
+    <div class="title_wrapper">
+      <div class="show_title_letter">
+        title
+      </div>
+      <div class="show_title">
+        <%= @review.title %></br>
+      </div>
+    </div>
 
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', reviews_path %>
+    <div class="comment_wrapper">
+      <div class="show_comment_letter">
+        comment
+      </div>
+      <div class="show_comment">
+        <%= @review.comment%>
+      </div>
+    </div>
+      
+    </div>
+  </div>
+</div>

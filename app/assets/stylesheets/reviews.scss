@@ -8,7 +8,49 @@
   margin: 20px;
 
 }
+//reviewのビューの基本的なレイアウト
 
+
+//index
+.index_wrapper {
+  display: flex;
+  
+}
+
+.user_info_wrapper {
+  width: 20%;
+  background-color: rgb(228, 228, 228);
+  text-align: center;
+  padding: 10px 10px 0px 10px;
+  height: calc(100vw - 100px);
+}
+
+.account_place {
+  background-color: white;
+}
+
+.account_letter {
+  border: double 10px rgb(134, 134, 134) ;
+  border-radius: 10%;
+}
+
+.user_name {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.reviews_wrapper {
+  width:80%;
+  height: calc(100% - 100px);
+
+}
+
+//index end
+
+
+
+//new
 .review_fields {
   display: flex;
 }
@@ -63,9 +105,64 @@
   display: inline-block;
   margin: auto;
 }
+//new end
+
+
+
+//show 
+.show_review {
+  display: flex;
+}
+
+.show_picture_and_info {
+  width: 50%;
+  text-align: center;
+
+}
+
+.show_title_and_comment {
+  width: 50%;
+  margin-right: 40px;
+}
+
+.title_wrapper {
+  border: solid 5px gray;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.show_title_letter {
+  font-size: xx-large;
+  border-bottom: double 8px gray ;
+
+}
+
+.show_title {
+  font-size: 20px;
+}
+
+.comment_wrapper {
+  border: solid 5px gray;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 20px;
+
+}
+
+.show_comment_letter {
+  font-size: xx-large;
+  border-bottom: double 8px gray ;
+
+}
+
+.show_comment {
+  font-size:20px ;
+}
+
+//show end
+
 
 //header css
-
 .header_template {
   display: flex;
   background-color: wheat;
@@ -101,8 +198,5 @@
   text-decoration: none;
   font-size: 20px;
 }
-
-
-
 
 //header css end
